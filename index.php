@@ -93,6 +93,11 @@
 <div>
 <a href="usuario.php">USER</a>
 </div>
+<div class="upload-box">
+	<label for="image-file">Upload file</label>
+	<input type="file" name="image-file" id="image-file" accept="image/*" />
+	<div id="server-results"></div>
+</div>
 <div class="upload-wrapper">
 	<div class="upload-click">Click para subir foto</div>
 	<div class="upload-image" style="display:none;">
@@ -104,3 +109,6 @@
 
     </body>
 </html>
+
+
+
