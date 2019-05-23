@@ -7,7 +7,7 @@ class UsuarioModel
 	{
 		try
 		{
-			$this->pdo = new PDO('mysql:host=localhost;dbname=jupiter', 'root', '');
+			$this->pdo = new PDO('mysql:host=localhost:3306;dbname=acad', 'root', '');
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		        
 		}
 		catch(Exception $e)
@@ -22,17 +22,17 @@ class UsuarioModel
 		{
 			$result = array();
 
-			$stm = $this->pdo->prepare("SELECT * FROM usuario");
+			$stm = $this->pdo->prepare("SELECT * FROM usuarios");
 			$stm->execute();
 
 			foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
 			{
 				$vo = new Usuario();
 
-				$vo->__SET('idusuario', $r->idusuario);
-				$vo->__SET('login', $r->login);
-				$vo->__SET('clave', $r->clave);
-				$vo->__SET('estado', $r->estado);
+				$vo->__SET('idusuario', $r->id);
+				$vo->__SET('login', $r->Login);
+				$vo->__SET('clave', $r->Clave);
+				$vo->__SET('estado', $r->Estado);
 
 				$result[] = $vo;
 			}
@@ -85,7 +85,7 @@ class UsuarioModel
 		}
 	}
 
-	public function Actualizar(Usuario $data)
+	public function Actualizar(Usuarios $data)
 	{
 		try 
 		{
@@ -110,7 +110,7 @@ class UsuarioModel
 		}
 	}
 
-	public function Registrar(Usuario $data)
+	public function Registrar(Usuarios $data)
 	{
 		try 
 		{
