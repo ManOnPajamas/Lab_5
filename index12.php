@@ -1,46 +1,8 @@
-<!doctype>
-<html?
+<!DOCTYPE html>
+<html lang="es">
 	<head>
-		<title>asdfasdf</title>
-		<style>
-			.upload-wrapper {
-				width: 300px;
-				margin-left:auto;
-				margin-right:auto;
-				background: #FFE4EF;
-				height: 50px;
-				border:2px dashed #FF69A5;
-				boder-radius:10px;
-				overflow:hidden:
-				margin-top:10px;
-				
-			}
-			.upload-wrapper .upload-click {
-				text-align: center;
-				margin-top:15px;
-			}
-			.upload-wrapper #input-file-upload {
-				display:none;
-			}			
-			.upload-wrapper .upload-image {
-				text-align: center;
-				padding:5px;
-				margin-top:15px;
-				display:none;
-			}
-			h1{
-				text-align:center;
-				color:#CECECE;
-			}
-			#server-response {
-				text-align:center;
-				margin-top:10px
-			}
-			.error {
-				color:#F0O;
-			}
-		</style>
-		<script type="text/javascript" src="js/jquery-1.11.1min.js"></script>
+		<title>Mantenimientos</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 		<script type="text/javascript">
 
 			$(function() {
@@ -112,21 +74,41 @@
 								
 				});
 			});
-		</script>
-	
-	
-	
-	
+</script>
 	</head>
-	<body>
-		<h1>asdfasdf</h1>
-		<div class="upload-wrapper">
-			<div class="upload-click">Click para subir foto</div>
-			<div class="upload-image" style="display:none;">
-				<img src="images/ajax-loader.gif" style="width:16px; height:16px;">
-			</div>
-			<input type="file" id="input-file-upload" style="display:none;">
-		</div>
-		<div id="server-response"></div
-	</body>
+    <body style="padding:15px;">
+
+<div>
+    <a href="alumno.php">Alumnos</a>
+</div>
+
+<div>
+<a href="usuario.php">usuarios</a>
+</div>
+
+<div>
+<a href="curso.php">curso</a>
+</div>
+              
+<div>
+<a href="usuario.php">USER</a>
+</div>
+<div class="upload-box">
+	<label for="image-file">Upload file</label>
+	<input type="file" name="image-file" id="image-file" accept="image/*" />
+	<div id="server-results"></div>
+</div>
+<div class="upload-wrapper">
+	<div class="upload-click">Click para subir foto</div>
+	<div class="upload-image" style="display:none;">
+		<img src="images/ajax-loader.gif" style="width:16px; height:16px;">
+	</div>
+	<input type="file" id="input-file-upload" style="display:none;">
+</div>
+<div id="server-response"></div>
+
+    </body>
 </html>
+
+
+
